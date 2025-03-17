@@ -1,0 +1,13 @@
+{
+  "bilibiliClient": {
+    "codeId": ""
+  },
+  "chusanBridge": {
+    "enabled": false,
+    "chusanServerUrl": "http://localhost:48100"
+  },
+  "ui": {
+    "scale": 1,
+    "orderListDisplaySize": 4
+  }
+}
