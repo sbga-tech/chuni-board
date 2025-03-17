@@ -29,6 +29,11 @@ jobs:
 
             - name: Install dependencies
               run: npm ci
+            
+            - name: Install client dependencies
+              run: |
+                cd client
+                npm ci
 
             - name: Validate current commit
               if: github.event_name == 'push'
