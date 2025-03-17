@@ -17,6 +17,7 @@ async function buildClient() {
 async function buildServer() {
     console.log("Building server...");
     const envDefaults = {
+        NODE_ENV: "",
         BILIBILI_APP_KEY: "",
         BILIBILI_APP_SECRET: "",
         BILIBILI_APP_ID: "",
