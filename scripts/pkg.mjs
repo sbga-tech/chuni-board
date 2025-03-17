@@ -3,6 +3,7 @@ import * as ResEdit from "resedit";
 import * as PELibrary from "pe-library";
 import { promises as fs } from "fs";
 import PkgMeta from "./pkg-meta.json" with { type: "json" };
+import NpmPkg from "../package.json" with { type: "json" };
 import { spawnAsync } from "./util.mjs";
 
 // Language code for en-us and encoding codepage for UTF-16
@@ -25,7 +26,7 @@ async function processStrings(res) {
     let viList = ResEdit.Resource.VersionInfo.fromEntries(res.entries);
     console.log(viList[0].data.strings);
     let vi = viList[0];
-    const theversion = `${PkgMeta.version}.0`.split(".");
+    const theversion = `${NpmPkg.version}.0`.split(".");
     console.log("Removing OriginalFilename");
     vi.removeStringValue(language, "OriginalFilename");
     console.log("Removing InternalName");
