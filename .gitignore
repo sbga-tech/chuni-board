@@ -47,10 +47,10 @@ node_modules/
 
 
 # build / generated output
-build/
-public/
-.pkg-cache/
-dist/
+/build/
+/public/
+/.pkg-cache/
+/dist/
 
 
 # VS Code files for those working on multiple tools
